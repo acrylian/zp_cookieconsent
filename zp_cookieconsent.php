@@ -26,26 +26,26 @@ class zpCookieconsent {
 
 	function getOptionsSupported() {
 		$options = array(
-				gettext_pl('Message', 'zp_cookieconsent') => array(
-						'key' => 'zpcookieconsent_message',
-						'type' => OPTION_TYPE_TEXTAREA,
-						'order' => 1,
-						'desc' => gettext_pl('The message shown by the plugin. Leave empty to use the default text.', 'zpCookieconsent')),
 				gettext_pl('Button: Agree', 'zp_cookieconsent') => array(
 						'key' => 'zpcookieconsent_buttonagree',
 						'type' => OPTION_TYPE_TEXTBOX,
-						'order' => 2,
+						'order' => 1,
 						'desc' => gettext_pl('Text used for the dismiss button. Leave empty to use the default text.', 'zpCookieconsent')),
 				gettext_pl('Button: Learn more', 'zp_cookieconsent') => array(
 						'key' => 'zpcookieconsent_buttonlearnmore',
 						'type' => OPTION_TYPE_TEXTBOX,
-						'order' => 3,
+						'order' => 2,
 						'desc' => gettext_pl('Text used for the learn more info button. Leave empty to use the default text.', 'zpCookieconsent')),
 				gettext_pl('Button: Learn more - Link', 'zp_cookieconsent') => array(
 						'key' => 'zpcookieconsent_buttonlearnmorelink',
 						'type' => OPTION_TYPE_TEXTBOX,
-						'order' => 4,
+						'order' => 3,
 						'desc' => gettext_pl('Link to your cookie policy / privacy info page.', 'zpCookieconsent')),
+				gettext_pl('Message', 'zp_cookieconsent') => array(
+						'key' => 'zpcookieconsent_message',
+						'type' => OPTION_TYPE_TEXTAREA,
+						'order' => 4,
+						'desc' => gettext_pl('The message shown by the plugin. Leave empty to use the default text.', 'zpCookieconsent')),
 				gettext_pl('Domain', 'zp_cookieconsent') => array(
 						'key' => 'zpcookieconsent_domain',
 						'type' => OPTION_TYPE_TEXTBOX,
