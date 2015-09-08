@@ -2,11 +2,11 @@
 /**
  * A plugin to add a cookie notify dialog to comply with the EU cookie law and Google's requirement for Google Ads and more
  * https://www.cookiechoices.org
- * 
+ *
  * Adapted of https://silktide.com/tools/cookie-consent/
  *
  * @author Malte Müller (acrylian)
- * @license GPL v3 or later 
+ * @license GPL v3 or later
  * @package plugins
  * @subpackage misc
  */
@@ -29,31 +29,37 @@ class zpCookieconsent {
 				gettext_pl('Message', 'zp_cookieconsent') => array(
 						'key' => 'zpcookieconsent_message',
 						'type' => OPTION_TYPE_TEXTAREA,
+						'order' => 1,
 						'desc' => gettext_pl('The message shown by the plugin. Leave empty to use the default text.', 'zpCookieconsent')),
 				gettext_pl('Button: Agree', 'zp_cookieconsent') => array(
 						'key' => 'zpcookieconsent_buttonagree',
 						'type' => OPTION_TYPE_TEXTBOX,
+						'order' => 2,
 						'desc' => gettext_pl('Text used for the dismiss button. Leave empty to use the default text.', 'zpCookieconsent')),
 				gettext_pl('Button: Learn more', 'zp_cookieconsent') => array(
 						'key' => 'zpcookieconsent_buttonlearnmore',
 						'type' => OPTION_TYPE_TEXTBOX,
+						'order' => 3,
 						'desc' => gettext_pl('Text used for the learn more info button. Leave empty to use the default text.', 'zpCookieconsent')),
 				gettext_pl('Button: Learn more - Link', 'zp_cookieconsent') => array(
 						'key' => 'zpcookieconsent_buttonlearnmorelink',
 						'type' => OPTION_TYPE_TEXTBOX,
+						'order' => 4,
 						'desc' => gettext_pl('Link to your cookie policy / privacy info page.', 'zpCookieconsent')),
 				gettext_pl('Domain', 'zp_cookieconsent') => array(
 						'key' => 'zpcookieconsent_domain',
 						'type' => OPTION_TYPE_TEXTBOX,
+						'order' => 5,
 						'desc' => gettext_pl('The domain for the consent cookie that Cookie Consent uses, to remember that users have consented to cookies. Useful if your website uses multiple subdomains, e.g. if your script is hosted at <code>www.example.com</code> you might override this to <code>example.com</code>, thereby allowing the same consent cookie to be read by subdomains like <code>foo.example.com</code>.', 'zp_cookieconsent')),
 				gettext_pl('Expire', 'zpCookieconsent') => array(
 						'key' => 'zpcookieconsent_expirydays',
 						'type' => OPTION_TYPE_TEXTBOX,
+						'order' => 6,
 						'desc' => gettext_pl('The number of days Cookie Consent should store the user’s consent information for.', 'zp_cookieconsent')),
 				gettext('Theme') => array(
 						'key' => 'zpcookieconsent_theme',
 						'type' => OPTION_TYPE_SELECTOR,
-						'order' => 4,
+						'order' => 7,
 						'selections' => array(
 								'dark-bottom' => 'dark-bottom',
 								'dark-floating' => 'dark-floating',
@@ -63,7 +69,7 @@ class zpCookieconsent {
 								'light-floating' => 'light-floating',
 								'light-inline' => 'light-inline',
 								'light-top' => 'light-top',
-								gettext_pl('none', 'zp_cookieconsent') => 'none'
+								gettext_pl('custom', 'zp_cookieconsent') => 'custom'
 						),
 						'desc' => gettext_pl('The theme you wish to use. Select NONE to use your own css via your custom theme for example.', 'zp_cookieconsent'))
 		);
