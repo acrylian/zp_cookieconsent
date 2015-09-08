@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: zp_cookieconsent\n"
-"POT-Creation-Date: 2015-09-07 12:05+0200\n"
-"PO-Revision-Date: 2015-09-07 12:14+0200\n"
+"POT-Creation-Date: 2015-09-08 16:01+0200\n"
+"PO-Revision-Date: 2015-09-08 16:02+0200\n"
 "Last-Translator: Malte Müller (acrylian) <wartgart@gmx.net>\n"
 "Language-Team: Malte Müller\n"
 "Language: de_DE\n"
@@ -37,8 +37,8 @@ msgstr ""
 "Standardtext zu verwenden."
 
 #: zp_cookieconsent.php:33
-msgid "Dismiss"
-msgstr "Wegtreten"
+msgid "Button: Agree"
+msgstr "Button: Zustimmen"
 
 #: zp_cookieconsent.php:36
 msgid "Text used for the dismiss button. Leave empty to use the default text."
@@ -47,8 +47,8 @@ msgstr ""
 "verwenden."
 
 #: zp_cookieconsent.php:37
-msgid "Learn more"
-msgstr "Mehr erfahren"
+msgid "Button: Learn more"
+msgstr "Button: Mehr erfahren"
 
 #: zp_cookieconsent.php:40
 msgid ""
@@ -59,33 +59,18 @@ msgstr ""
 "Standardtext zu verwenden."
 
 #: zp_cookieconsent.php:41
-msgid "Learn more Link"
-msgstr "Mehr-erfahren-Link"
+msgid "Button: Learn more - Link"
+msgstr "Button: Mehr-erfahren-Link"
 
 #: zp_cookieconsent.php:44
 msgid "Link to your cookie policy / privacy info page."
 msgstr "Link zu Ihrer Cookie-/Privatspären-Infoseite"
 
 #: zp_cookieconsent.php:45
-msgid "Path"
-msgstr "Pfad"
-
-#: zp_cookieconsent.php:48
-msgid ""
-"The path for the consent cookie that Cookie Consent uses, to remember that "
-"users have consented to cookies. Use to limit consent to a specific path "
-"within your website. If empty the default <code>/</code> is used."
-msgstr ""
-"Der PFade für den Zustimmungscookie, den Cookie Consent nutzt, um zu "
-"speichern, dass ein Besucher zugestimmt hat. Verwenden sie dies, um die "
-"Zustimmung für einen bestimmten Pfad innerhalb Ihrer Website zu begrenzen. "
-"Leer lassen, um den Standard <code>/</code> zu verwenden."
-
-#: zp_cookieconsent.php:49
 msgid "Domain"
 msgstr "Domain"
 
-#: zp_cookieconsent.php:52
+#: zp_cookieconsent.php:48
 msgid ""
 "The domain for the consent cookie that Cookie Consent uses, to remember that "
 "users have consented to cookies. Useful if your website uses multiple "
@@ -101,25 +86,25 @@ msgstr ""
 "code> übergehen, so dass der Cookie auch für subdomains wie <code>foo."
 "example.com</code> gilt."
 
-#: zp_cookieconsent.php:53
+#: zp_cookieconsent.php:49
 msgid "Expire"
 msgstr "Verfall"
 
-#: zp_cookieconsent.php:56
+#: zp_cookieconsent.php:52
 msgid ""
 "The number of days Cookie Consent should store the user’s consent "
 "information for."
 msgstr "Die Anzahl an Tagen, die der Zustimmungscookie gültig sein soll."
 
-#: zp_cookieconsent.php:57
+#: zp_cookieconsent.php:53
 msgid "Theme"
 msgstr "Theme"
 
-#: zp_cookieconsent.php:70
+#: zp_cookieconsent.php:66
 msgid "none"
 msgstr "Keins"
 
-#: zp_cookieconsent.php:72
+#: zp_cookieconsent.php:68
 msgid ""
 "The theme you wish to use. Select NONE to use your own css via your custom "
 "theme for example."
@@ -127,7 +112,7 @@ msgstr ""
 "Das zu verwendende Theme. Wählen Sie KEINS, wenn Sie das Aussehen z.B. über "
 "Ihr eigenes Theme CSS steuern möchten."
 
-#: zp_cookieconsent.php:79
+#: zp_cookieconsent.php:74
 msgid ""
 "This website uses cookies. By continuing to browse the site, you agree to "
 "our use of cookies."
@@ -135,10 +120,26 @@ msgstr ""
 "Diese Website verwendet Cookies. Wenn Sie die Site weiter verwenden, stimmen "
 "Sie unsere Cookienutzung zu."
 
-#: zp_cookieconsent.php:83
+#: zp_cookieconsent.php:78
 msgid "Agree"
 msgstr "Einverstanden"
 
-#: zp_cookieconsent.php:87
+#: zp_cookieconsent.php:82
 msgid "More info"
 msgstr "Mehr Information"
+
+#~ msgid "Dismiss"
+#~ msgstr "Wegtreten"
+
+#~ msgid "Path"
+#~ msgstr "Pfad"
+
+#~ msgid ""
+#~ "The path for the consent cookie that Cookie Consent uses, to remember "
+#~ "that users have consented to cookies. Use to limit consent to a specific "
+#~ "path within your website. If empty the default <code>/</code> is used."
+#~ msgstr ""
+#~ "Der PFade für den Zustimmungscookie, den Cookie Consent nutzt, um zu "
+#~ "speichern, dass ein Besucher zugestimmt hat. Verwenden sie dies, um die "
+#~ "Zustimmung für einen bestimmten Pfad innerhalb Ihrer Website zu "
+#~ "begrenzen. Leer lassen, um den Standard <code>/</code> zu verwenden."
