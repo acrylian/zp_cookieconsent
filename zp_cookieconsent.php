@@ -100,7 +100,6 @@ class zpCookieconsent {
         learnMore: '<?php echo $learnmore; ?>',
 				theme: '<?php echo $theme ; ?>',
         link: '<?php echo html_encode($link); ?>',
-				path: '<?php echo html_encode($path); ?>',
 				domain: '<?php echo $domain; ?>',
 				expiryDays: <?php echo getOption('zpcookieconsent_expirydays'); ?>
     };
