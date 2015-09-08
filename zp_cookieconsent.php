@@ -42,10 +42,6 @@ class zpCookieconsent {
 						'key' => 'zpcookieconsent_buttonlearnmorelink',
 						'type' => OPTION_TYPE_TEXTBOX,
 						'desc' => gettext_pl('Link to your cookie policy / privacy info page.', 'zpCookieconsent')),
-				gettext_pl('Path', 'zp_cookieconsent') => array(
-						'key' => 'zpcookieconsent_path',
-						'type' => OPTION_TYPE_TEXTBOX,
-						'desc' => gettext_pl('The path for the consent cookie that Cookie Consent uses, to remember that users have consented to cookies. Use to limit consent to a specific path within your website. If empty the default <code>/</code> is used.', 'zp_cookieconsent')),
 				gettext_pl('Domain', 'zp_cookieconsent') => array(
 						'key' => 'zpcookieconsent_domain',
 						'type' => OPTION_TYPE_TEXTBOX,
@@ -91,10 +87,6 @@ class zpCookieconsent {
 		$theme = '';
 		if (getOption('zpcookieconsent_theme')) {
 			$theme = FULLWEBPATH . '/' . USER_PLUGIN_FOLDER . '/zp_cookieconsent/styles/' . getOption('zpcookieconsent_theme') . '.css';
-		}
-		$path = '/';
-		if (getOption('zpcookieconsent_path')) {
-			$path = getOption('zpcookieconsent_path');
 		}
 		$domain = '';
 		if (getOption('zpcookieconsent_domain')) {
