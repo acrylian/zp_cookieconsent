@@ -1,0 +1,145 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: zp_cookieconsent\n"
+"POT-Creation-Date: 2015-09-08 21:52+0200\n"
+"PO-Revision-Date: 2015-09-08 21:57+0200\n"
+"Last-Translator: fretzl\n"
+"Language-Team: fretzl\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-Basepath: ../../../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: gettext_pl\n"
+"X-Poedit-SearchPath-0: zp_cookieconsent\n"
+"X-Poedit-SearchPath-1: zp_cookieconsent.php\n"
+
+#: zp_cookieconsent.php:14
+msgid ""
+"A plugin to add a cookie notify dialog to comply with the EU cookie law and "
+"Google's request regarding usages of Google Adwords, Analytics and more"
+msgstr ""
+"Een plugin voor het tonen van een cookieverklaring volgens EU wetgeving."
+
+#: zp_cookieconsent.php:29
+msgid "Message"
+msgstr "Bericht"
+
+#: zp_cookieconsent.php:33
+msgid "The message shown by the plugin. Leave empty to use the default text."
+msgstr ""
+"De tekst die getoond wordt. Laat leeg om de standaard tekst te gebruiken."
+
+#: zp_cookieconsent.php:34
+msgid "Button: Agree"
+msgstr "Knop: Sluiten"
+
+#: zp_cookieconsent.php:38
+msgid "Text used for the dismiss button. Leave empty to use the default text."
+msgstr ""
+"De tekst voor de <em>Sluiten</em> knop. Laat leeg om de standaard tekst te "
+"gebruiken."
+
+#: zp_cookieconsent.php:39
+msgid "Button: Learn more"
+msgstr "Knop: Meer informatie"
+
+#: zp_cookieconsent.php:43
+msgid ""
+"Text used for the learn more info button. Leave empty to use the default "
+"text."
+msgstr ""
+"De tekst voor de <em>Meer informatie</em> knop. Laat leeg om de standaard "
+"tekst te gebruiken."
+
+#: zp_cookieconsent.php:44
+msgid "Button: Learn more - Link"
+msgstr "Knop: Meer informatie - link"
+
+#: zp_cookieconsent.php:48
+msgid "Link to your cookie policy / privacy info page."
+msgstr "Link naar de pagina met cookie / privacy informatie."
+
+#: zp_cookieconsent.php:49
+msgid "Domain"
+msgstr "Domein"
+
+#: zp_cookieconsent.php:53
+msgid ""
+"The domain for the consent cookie that Cookie Consent uses, to remember that "
+"users have consented to cookies. Useful if your website uses multiple "
+"subdomains, e.g. if your script is hosted at <code>www.example.com</code> "
+"you might override this to <code>example.com</code>, thereby allowing the "
+"same consent cookie to be read by subdomains like <code>foo.example.com</"
+"code>."
+msgstr ""
+"Het domein dat onthouden wordt door Cookie Consent wanneer gebruikers "
+"akkoord zijn gegaan. Dit kan handig zijn wanneer de website meerdere "
+"subdomeinen gebruikt. Als je website bijvoorbeeld gehost wordt op <code>www."
+"example.com</code> kun je hier  <code>example.com</code> invullen zodat "
+"dezelfde cookie-toestemming gebruikt kan worden door <code>foo.example.com</"
+"code>."
+
+#: zp_cookieconsent.php:54
+msgid "Expire"
+msgstr "Vervallen"
+
+#: zp_cookieconsent.php:58
+msgid ""
+"The number of days Cookie Consent should store the user’s consent "
+"information for."
+msgstr "Het aantal dagen dat de cookie-toestemming bewaard wordt."
+
+#: zp_cookieconsent.php:59
+msgid "Theme"
+msgstr "Thema"
+
+#: zp_cookieconsent.php:72
+msgid "custom"
+msgstr "custom"
+
+#: zp_cookieconsent.php:74
+msgid ""
+"The theme you wish to use. Select NONE to use your own css via your custom "
+"theme for example."
+msgstr ""
+"Het thema dat je wilt gebruiken. Selecteer <em>custom</em> om je eigen "
+"stylesheet met de naam <code>custom.css</code> te gebruiken."
+
+#: zp_cookieconsent.php:80
+msgid ""
+"This website uses cookies. By continuing to browse the site, you agree to "
+"our use of cookies."
+msgstr ""
+"Deze website gebruikt cookies. Wanneer u doorgaat accepteert u het gebruik "
+"van deze cookies."
+
+#: zp_cookieconsent.php:84
+msgid "Agree"
+msgstr "Sluiten"
+
+#: zp_cookieconsent.php:88
+msgid "More info"
+msgstr "Meer informatie"
+
+#~ msgid "none"
+#~ msgstr "custom"
+
+#~ msgid "Dismiss"
+#~ msgstr "Sluiten"
+
+#~ msgid "Path"
+#~ msgstr "Pfad"
+
+#~ msgid ""
+#~ "The path for the consent cookie that Cookie Consent uses, to remember "
+#~ "that users have consented to cookies. Use to limit consent to a specific "
+#~ "path within your website. If empty the default <code>/</code> is used."
+#~ msgstr ""
+#~ "Der PFade für den Zustimmungscookie, den Cookie Consent nutzt, um zu "
+#~ "speichern, dass ein Besucher zugestimmt hat. Verwenden sie dies, um die "
+#~ "Zustimmung für einen bestimmten Pfad innerhalb Ihrer Website zu "
+#~ "begrenzen. Leer lassen, um den Standard <code>/</code> zu verwenden."
