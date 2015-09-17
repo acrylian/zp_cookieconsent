@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: zp_cookieconsent\n"
-"POT-Creation-Date: 2015-09-08 16:01+0200\n"
-"PO-Revision-Date: 2015-09-08 16:02+0200\n"
+"POT-Creation-Date: 2015-09-09 12:28+0200\n"
+"PO-Revision-Date: 2015-09-09 15:50+0200\n"
 "Last-Translator: Malte Müller (acrylian) <wartgart@gmx.net>\n"
 "Language-Team: Malte Müller\n"
 "Language: de_DE\n"
@@ -27,30 +27,20 @@ msgstr ""
 "und mehr zu entsprechen."
 
 #: zp_cookieconsent.php:29
-msgid "Message"
-msgstr "Nachricht"
-
-#: zp_cookieconsent.php:32
-msgid "The message shown by the plugin. Leave empty to use the default text."
-msgstr ""
-"Die Nachricht, die vom Plugin angezeigt wird. Leer lassen, um den "
-"Standardtext zu verwenden."
-
-#: zp_cookieconsent.php:33
 msgid "Button: Agree"
 msgstr "Button: Zustimmen"
 
-#: zp_cookieconsent.php:36
+#: zp_cookieconsent.php:33
 msgid "Text used for the dismiss button. Leave empty to use the default text."
 msgstr ""
 "Der Text für den Zustimmungsbutton. Leer lassen, um den Standardtext zu "
 "verwenden."
 
-#: zp_cookieconsent.php:37
+#: zp_cookieconsent.php:34
 msgid "Button: Learn more"
 msgstr "Button: Mehr erfahren"
 
-#: zp_cookieconsent.php:40
+#: zp_cookieconsent.php:38
 msgid ""
 "Text used for the learn more info button. Leave empty to use the default "
 "text."
@@ -58,19 +48,29 @@ msgstr ""
 "Der Text für den Link mit mehr Informationen. Leer lassen, um den "
 "Standardtext zu verwenden."
 
-#: zp_cookieconsent.php:41
+#: zp_cookieconsent.php:39
 msgid "Button: Learn more - Link"
 msgstr "Button: Mehr-erfahren-Link"
 
-#: zp_cookieconsent.php:44
+#: zp_cookieconsent.php:43
 msgid "Link to your cookie policy / privacy info page."
 msgstr "Link zu Ihrer Cookie-/Privatspären-Infoseite"
 
-#: zp_cookieconsent.php:45
+#: zp_cookieconsent.php:44
+msgid "Message"
+msgstr "Nachricht"
+
+#: zp_cookieconsent.php:48
+msgid "The message shown by the plugin. Leave empty to use the default text."
+msgstr ""
+"Die Nachricht, die vom Plugin angezeigt wird. Leer lassen, um den "
+"Standardtext zu verwenden."
+
+#: zp_cookieconsent.php:49
 msgid "Domain"
 msgstr "Domain"
 
-#: zp_cookieconsent.php:48
+#: zp_cookieconsent.php:53
 msgid ""
 "The domain for the consent cookie that Cookie Consent uses, to remember that "
 "users have consented to cookies. Useful if your website uses multiple "
@@ -86,25 +86,25 @@ msgstr ""
 "code> übergehen, so dass der Cookie auch für subdomains wie <code>foo."
 "example.com</code> gilt."
 
-#: zp_cookieconsent.php:49
+#: zp_cookieconsent.php:54
 msgid "Expire"
 msgstr "Verfall"
 
-#: zp_cookieconsent.php:52
+#: zp_cookieconsent.php:58
 msgid ""
 "The number of days Cookie Consent should store the user’s consent "
 "information for."
 msgstr "Die Anzahl an Tagen, die der Zustimmungscookie gültig sein soll."
 
-#: zp_cookieconsent.php:53
+#: zp_cookieconsent.php:59
 msgid "Theme"
 msgstr "Theme"
 
-#: zp_cookieconsent.php:66
-msgid "none"
-msgstr "Keins"
+#: zp_cookieconsent.php:72
+msgid "custom"
+msgstr "Benutzerdefiniert"
 
-#: zp_cookieconsent.php:68
+#: zp_cookieconsent.php:74
 msgid ""
 "The theme you wish to use. Select NONE to use your own css via your custom "
 "theme for example."
@@ -112,21 +112,24 @@ msgstr ""
 "Das zu verwendende Theme. Wählen Sie KEINS, wenn Sie das Aussehen z.B. über "
 "Ihr eigenes Theme CSS steuern möchten."
 
-#: zp_cookieconsent.php:74
+#: zp_cookieconsent.php:80
 msgid ""
 "This website uses cookies. By continuing to browse the site, you agree to "
 "our use of cookies."
 msgstr ""
 "Diese Website verwendet Cookies. Wenn Sie die Site weiter verwenden, stimmen "
-"Sie unsere Cookienutzung zu."
+"Sie unserer Cookienutzung zu."
 
-#: zp_cookieconsent.php:78
+#: zp_cookieconsent.php:84
 msgid "Agree"
 msgstr "Einverstanden"
 
-#: zp_cookieconsent.php:82
+#: zp_cookieconsent.php:88
 msgid "More info"
 msgstr "Mehr Information"
+
+#~ msgid "none"
+#~ msgstr "Keins"
 
 #~ msgid "Dismiss"
 #~ msgstr "Wegtreten"

@@ -22,6 +22,7 @@ class zpCookieconsent {
 
 	function __construct() {
 		setOptionDefault('zpcookieconsent_expirydays', 365);
+		setOptionDefault('zpcookieconsent_theme', 'dark-bottom');
 	}
 
 	function getOptionsSupported() {
@@ -75,7 +76,7 @@ class zpCookieconsent {
 		);
 		return $options;
 	}
-
+	
 	static function getJS() {
 		$message = gettext_pl('This website uses cookies. By continuing to browse the site, you agree to our use of cookies.', 'zp_cookieconsent');
 		if (getOption('zpcookieconsent_message')) {
@@ -113,5 +114,6 @@ class zpCookieconsent {
 		<script src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/zp_cookieconsent/cookieconsent.min.js"></script>
 		<?php
 	}
+	
 } // class end
 ?>
