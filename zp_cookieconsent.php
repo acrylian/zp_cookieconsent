@@ -13,7 +13,7 @@
 $plugin_is_filter = 5 | THEME_PLUGIN;
 $plugin_description = gettext_pl("A plugin to add a cookie notify dialog to comply with the EU cookie law and Google's request regarding usages of Google Adwords, Analytics and more", 'zp_cookieconsent');
 $plugin_author = "Malte Müller (acrylian)";
-$plugin_version = '1.0';
+$plugin_version = '1.0.1';
 $option_interface = 'zpCookieconsent';
 
 zp_register_filter('theme_body_close', 'zpCookieconsent::getJS');
@@ -63,12 +63,12 @@ class zpCookieconsent {
 						'order' => 7,
 						'selections' => array(
 								'dark-bottom' => 'dark-bottom',
+								'dark-floating-tada' => 'dark-floating-tada',
 								'dark-floating' => 'dark-floating',
 								'dark-inline' => 'dark-inline',
 								'dark-top' => 'dark-top',
 								'light-bottom' => 'light-bottom',
 								'light-floating' => 'light-floating',
-								'light-inline' => 'light-inline',
 								'light-top' => 'light-top',
 								gettext_pl('custom', 'zp_cookieconsent') => 'custom'
 						),
