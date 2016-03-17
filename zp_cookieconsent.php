@@ -14,11 +14,11 @@ $plugin_is_filter = 5 | THEME_PLUGIN;
 $plugin_description = gettext_pl("A plugin to add a cookie notify dialog to comply with the EU cookie law and Google's request regarding usages of Google Adwords, Analytics and more", 'zp_cookieconsent');
 $plugin_author = "Malte Müller (acrylian)";
 $plugin_version = '1.0.1';
-$option_interface = 'zpCookieconsent';
+$option_interface = 'zp_cookieconsent';
 
-zp_register_filter('theme_body_close', 'zpCookieconsent::getJS');
+zp_register_filter('theme_body_close', 'zp_cookieconsent::getJS');
 
-class zpCookieconsent {
+class zp_cookieconsent {
 
 	function __construct() {
 		setOptionDefault('zpcookieconsent_expirydays', 365);
@@ -31,28 +31,28 @@ class zpCookieconsent {
 						'key' => 'zpcookieconsent_buttonagree',
 						'type' => OPTION_TYPE_TEXTBOX,
 						'order' => 1,
-						'desc' => gettext_pl('Text used for the dismiss button. Leave empty to use the default text.', 'zpCookieconsent')),
+						'desc' => gettext_pl('Text used for the dismiss button. Leave empty to use the default text.', 'zp_cookieconsent')),
 				gettext_pl('Button: Learn more', 'zp_cookieconsent') => array(
 						'key' => 'zpcookieconsent_buttonlearnmore',
 						'type' => OPTION_TYPE_TEXTBOX,
 						'order' => 2,
-						'desc' => gettext_pl('Text used for the learn more info button. Leave empty to use the default text.', 'zpCookieconsent')),
+						'desc' => gettext_pl('Text used for the learn more info button. Leave empty to use the default text.', 'zp_cookieconsent')),
 				gettext_pl('Button: Learn more - Link', 'zp_cookieconsent') => array(
 						'key' => 'zpcookieconsent_buttonlearnmorelink',
 						'type' => OPTION_TYPE_TEXTBOX,
 						'order' => 3,
-						'desc' => gettext_pl('Link to your cookie policy / privacy info page.', 'zpCookieconsent')),
+						'desc' => gettext_pl('Link to your cookie policy / privacy info page.', 'zp_cookieconsent')),
 				gettext_pl('Message', 'zp_cookieconsent') => array(
 						'key' => 'zpcookieconsent_message',
 						'type' => OPTION_TYPE_TEXTAREA,
 						'order' => 4,
-						'desc' => gettext_pl('The message shown by the plugin. Leave empty to use the default text.', 'zpCookieconsent')),
+						'desc' => gettext_pl('The message shown by the plugin. Leave empty to use the default text.', 'zp_cookieconsent')),
 				gettext_pl('Domain', 'zp_cookieconsent') => array(
 						'key' => 'zpcookieconsent_domain',
 						'type' => OPTION_TYPE_TEXTBOX,
 						'order' => 5,
 						'desc' => gettext_pl('The domain for the consent cookie that Cookie Consent uses, to remember that users have consented to cookies. Useful if your website uses multiple subdomains, e.g. if your script is hosted at <code>www.example.com</code> you might override this to <code>example.com</code>, thereby allowing the same consent cookie to be read by subdomains like <code>foo.example.com</code>.', 'zp_cookieconsent')),
-				gettext_pl('Expire', 'zpCookieconsent') => array(
+				gettext_pl('Expire', 'zp_cookieconsent') => array(
 						'key' => 'zpcookieconsent_expirydays',
 						'type' => OPTION_TYPE_TEXTBOX,
 						'order' => 6,
