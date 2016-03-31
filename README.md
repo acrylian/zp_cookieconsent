@@ -9,7 +9,7 @@ Available in following languages:
 - English (native)
 - French (Thanks to @michgagnon)
 - German
-- Italian (Thamks to @bic-ed)
+- Italian (Thanks to @bic-ed)
 
 More translations welcome. More here: http://www.zenphoto.org/news/translating-tutorial
 
