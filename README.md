@@ -4,9 +4,12 @@ A [Zenphoto](http://www.zenphoto.org) plugin to add a cookie notify dialog to co
 Google's requirement for Google Ads and more. More info on that on https://www.cookiechoices.org
 
 Available in following languages:
-- English (native)
+
 - Dutch (Thanks to @fretzl)
+- English (native)
+- French (Thanks to @michgagnon)
 - German
+- Italian (Thamks to @bic-ed)
 
 More translations welcome. More here: http://www.zenphoto.org/news/translating-tutorial
 
