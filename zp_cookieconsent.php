@@ -63,7 +63,7 @@ class zpCookieconsent {
 						'order' => 6,
 						'multilingual' => 1,
 						'desc' => gettext_pl('The number of days Cookie Consent should store the user’s consent information for.', 'zp_cookieconsent')),
-				gettext('Theme') => array(
+				gettext('Style') => array(
 						'key' => 'zpcookieconsent_theme',
 						'type' => OPTION_TYPE_SELECTOR,
 						'order' => 7,
@@ -76,9 +76,10 @@ class zpCookieconsent {
 								gettext_pl('light-bottom', 'zp_cookieconsent') => 'light-bottom',
 								gettext_pl('light-floating', 'zp_cookieconsent') => 'light-floating',
 								gettext_pl('light-top', 'zp_cookieconsent') => 'light-top',
-								gettext_pl('custom', 'zp_cookieconsent') => 'custom'
+								gettext_pl('custom', 'zp_cookieconsent') => 'custom',
+								gettext_pl('none', 'zp_cookieconsent') => 'none'
 						),
-						'desc' => gettext_pl('The theme you wish to use. Select NONE to use your own css via your custom theme for example.', 'zp_cookieconsent'))
+						'desc' => gettext_pl('The style you wish to use. Select <em>custom</em> to use a custom.css file you need to place within <code>zp_cookieconsent/styles/</code>. Select <em>none</em> to disable loading of any css files so your custom theme css can take over.', 'zp_cookieconsent'))
 		);
 		return $options;
 	}
@@ -98,7 +99,7 @@ class zpCookieconsent {
 		}
 		$link = getOption('zpcookieconsent_buttonlearnmorelink');
 		$theme = '';
-		if (getOption('zpcookieconsent_theme')) {
+		if (getOption('zpcookieconsent_theme') != 'none') {
 			$theme = FULLWEBPATH . '/' . USER_PLUGIN_FOLDER . '/zp_cookieconsent/styles/' . getOption('zpcookieconsent_theme') . '.css';
 		}
 		$domain = '';

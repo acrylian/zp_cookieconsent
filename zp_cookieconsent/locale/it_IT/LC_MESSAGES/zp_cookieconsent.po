@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: zp_cookieconsent\n"
-"POT-Creation-Date: 2016-03-16 15:18+0100\n"
-"PO-Revision-Date: 2016-03-17 09:50+0100\n"
+"POT-Creation-Date: 2016-03-30 09:59+0200\n"
+"PO-Revision-Date: 2016-03-30 10:37+0200\n"
 "Last-Translator: Malte Müller (acrylian) <wartgart@gmx.net>\n"
 "Language-Team: Antonio Ranesi <Antonio Ranesi [bic]>\n"
 "Language: it_IT\n"
@@ -29,17 +29,17 @@ msgstr ""
 msgid "Button: Agree"
 msgstr "Pulsante: Accetto"
 
-#: zp_cookieconsent.php:34
+#: zp_cookieconsent.php:35
 msgid "Text used for the dismiss button. Leave empty to use the default text."
 msgstr ""
 "Testo usato per il pulsante di chiusura del banner. Lasciare vuoto per usare "
 "il testo predefinito."
 
-#: zp_cookieconsent.php:35
+#: zp_cookieconsent.php:36
 msgid "Button: Learn more"
 msgstr "Pulsante: Altre informazioni"
 
-#: zp_cookieconsent.php:39
+#: zp_cookieconsent.php:41
 msgid ""
 "Text used for the learn more info button. Leave empty to use the default "
 "text."
@@ -47,29 +47,29 @@ msgstr ""
 "Testo utilizzato per il pulsante altre informazioni. Lasciare vuoto per "
 "usare il testo predefinito."
 
-#: zp_cookieconsent.php:40
+#: zp_cookieconsent.php:42
 msgid "Button: Learn more - Link"
 msgstr "Pulsante: Altre informazioni - Link"
 
-#: zp_cookieconsent.php:44
+#: zp_cookieconsent.php:47
 msgid "Link to your cookie policy / privacy info page."
 msgstr "Link alla pagina con la cookie policy / privacy policy del sito."
 
-#: zp_cookieconsent.php:45
+#: zp_cookieconsent.php:48
 msgid "Message"
 msgstr "Messaggio"
 
-#: zp_cookieconsent.php:49
+#: zp_cookieconsent.php:53
 msgid "The message shown by the plugin. Leave empty to use the default text."
 msgstr ""
 "Il messaggio visualizzato dal plug-in. Lasciare vuoto per usare il testo "
 "predefinito."
 
-#: zp_cookieconsent.php:50
+#: zp_cookieconsent.php:54
 msgid "Domain"
 msgstr "Dominio"
 
-#: zp_cookieconsent.php:54
+#: zp_cookieconsent.php:59
 msgid ""
 "The domain for the consent cookie that Cookie Consent uses, to remember that "
 "users have consented to cookies. Useful if your website uses multiple "
@@ -85,11 +85,11 @@ msgstr ""
 "<code>example.com</code>, consentendo quindi che lo stesso cookie di "
 "consenso sia letto da tutti i sottodomini tipo <code>foo.example.com</code>."
 
-#: zp_cookieconsent.php:55
+#: zp_cookieconsent.php:60
 msgid "Expire"
 msgstr "Scadenza"
 
-#: zp_cookieconsent.php:59
+#: zp_cookieconsent.php:65
 msgid ""
 "The number of days Cookie Consent should store the user’s consent "
 "information for."
@@ -97,23 +97,55 @@ msgstr ""
 "Numero di giorni per cui Cookie Consent deve conservare le informazioni sul "
 "consenso dell'utente."
 
-#: zp_cookieconsent.php:60
+#: zp_cookieconsent.php:66
 msgid "Theme"
 msgstr "Tema"
 
+#: zp_cookieconsent.php:71
+msgid "dark-bottom"
+msgstr "scuro-in basso"
+
+#: zp_cookieconsent.php:72
+msgid "dark-floating-tada"
+msgstr "scuro-fluttuante-tada"
+
 #: zp_cookieconsent.php:73
+msgid "dark-floating"
+msgstr "scuro-fluttuante"
+
+#: zp_cookieconsent.php:74
+msgid "dark-inline"
+msgstr "scuro-in linea"
+
+#: zp_cookieconsent.php:75
+msgid "dark-top"
+msgstr "scuro-in alto"
+
+#: zp_cookieconsent.php:76
+msgid "light-bottom"
+msgstr "chiaro-in basso"
+
+#: zp_cookieconsent.php:77
+msgid "light-floating"
+msgstr "chiaro-fluttuante"
+
+#: zp_cookieconsent.php:78
+msgid "light-top"
+msgstr "chiaro-in alto"
+
+#: zp_cookieconsent.php:79
 msgid "custom"
 msgstr "personalizzato"
 
-#: zp_cookieconsent.php:75
+#: zp_cookieconsent.php:81
 msgid ""
 "The theme you wish to use. Select NONE to use your own css via your custom "
 "theme for example."
 msgstr ""
-"Il tema che si vuole usare. Scegliere CUSTOM per usare un proprio css, ad "
+"Il tema che si vuole usare. Scegliere NESSUNO per usare un proprio css, ad "
 "esempio attraverso un tema personale."
 
-#: zp_cookieconsent.php:81
+#: zp_cookieconsent.php:87
 msgid ""
 "This website uses cookies. By continuing to browse the site, you agree to "
 "our use of cookies."
@@ -121,11 +153,11 @@ msgstr ""
 "Questo sito usa i cookie. Continuando a navigare nel sito, si accetta "
 "implicitamente l'uso dei cookie."
 
-#: zp_cookieconsent.php:85
+#: zp_cookieconsent.php:91
 msgid "Agree"
 msgstr "Accetto"
 
-#: zp_cookieconsent.php:89
+#: zp_cookieconsent.php:95
 msgid "More info"
 msgstr "Altre informazioni"
 
