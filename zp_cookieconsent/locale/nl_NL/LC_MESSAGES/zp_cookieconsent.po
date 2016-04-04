@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zp_cookieconsent\n"
 "POT-Creation-Date: 2016-04-04 09:46+0200\n"
-"PO-Revision-Date: 2016-04-04 11:13+0200\n"
+"PO-Revision-Date: 2016-04-04 11:32+0200\n"
 "Last-Translator: fretzl\n"
 "Language-Team: fretzl\n"
 "Language: nl\n"
@@ -26,7 +26,7 @@ msgstr ""
 
 #: zp_cookieconsent.php:33
 msgid "Button: Agree"
-msgstr "Knop: Sluiten"
+msgstr "Knop: Akkoord"
 
 #: zp_cookieconsent.php:38
 msgid "Text used for the dismiss button. Leave empty to use the default text."
