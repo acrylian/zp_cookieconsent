@@ -1,9 +1,8 @@
 # zp_cookieconsent
 
 A [Zenphoto](http://www.zenphoto.org) plugin to add a cookie notify dialog to comply with the EU cookie law and 
-Google's requirement for Google Ads and more. More info on that on https://www.cookiechoices.org
+Google's requirement for Google Ads and more. More info on that on [www.cookiechoices.org](https://www.cookiechoices.org)
 
-"Dismiss on scroll" functionality contributed by [bic-ed](https://github.com/bic-ed)
 
 Available in following languages:
 
@@ -13,9 +12,9 @@ Available in following languages:
 - German
 - Italian (Thanks to [bic-ed](https://github.com/bic-ed))
 
-More translations welcome. More info here: http://www.zenphoto.org/news/translating-tutorial
+More translations welcome. More info on the [Zenphoto translation tutorial](http://www.zenphoto.org/news/translating-tutorial).
 
-Adapted from https://silktide.com/tools/cookie-consent/
+Adapted from [cookieconsent.insites.com](https://cookieconsent.insites.com)
 
 ## Installation
 
