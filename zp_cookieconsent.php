@@ -18,9 +18,8 @@ $option_interface = 'zpCookieconsent';
 
 if (!isset($_COOKIE['cookieconsent_status'])) {
 	zp_register_filter('theme_head', 'zpCookieconsent::getCSS');
-	zp_register_filter('theme_body_close', 'zpCookieconsent::getJS');
-}
-
+	zp_register_filter('theme_head', 'zpCookieconsent::getJS');
+}	
 class zpCookieconsent {
 
 	function __construct() {
@@ -28,6 +27,12 @@ class zpCookieconsent {
 		setOptionDefault('zpcookieconsent_theme', 'block');
 		setOptionDefault('zpcookieconsent_scrollrange', '75');
 		setOptionDefault('zpcookieconsent_position', 'bottom');
+		if (getOption('zpcookieconsent_dismissonclick')) {
+			purgeOption('zpcookieconsent_dismissonclick');
+		}
+		if(getOption('zpcookieconsent_scrollrange')) {
+			purgeOption('zpcookieconsent_scrollrange');
+		}
 	}
 
 	function getOptionsSupported() {
@@ -60,7 +65,7 @@ class zpCookieconsent {
 						'order' => 4,
 						'multilingual' => 1,
 						'desc' => gettext_pl('The message shown by the plugin. Leave empty to use the default text.', 'zp_cookieconsent')),
-				gettext_pl('Header') => array(
+				gettext_pl('Header', 'zp_cookieconsent') => array(
 						'key' => 'zpcookieconsent_header',
 						'type' => OPTION_TYPE_TEXTBOX,
 						'order' => 1,
@@ -76,7 +81,7 @@ class zpCookieconsent {
 						'type' => OPTION_TYPE_TEXTBOX,
 						'order' => 6,
 						'desc' => gettext_pl('The number of days Cookie Consent should store the user’s consent information for.', 'zp_cookieconsent')),
-				gettext('Style') => array(
+				gettext('Theme') => array(
 						'key' => 'zpcookieconsent_theme',
 						'type' => OPTION_TYPE_SELECTOR,
 						'order' => 7,
@@ -87,7 +92,7 @@ class zpCookieconsent {
 								gettext_pl('custom', 'zp_cookieconsent') => 'custom'
 						),
 						'desc' => gettext_pl('These are the included default themes. Users can create their own themes: The chosen theme is added to the popup container as a CSS class in the form of .cc-style-THEME_NAME.', 'zp_cookieconsent')),
-					gettext('Position') => array(
+				gettext('Position') => array(
 						'key' => 'zpcookieconsent_position',
 						'type' => OPTION_TYPE_SELECTOR,
 						'order' => 7,
@@ -100,28 +105,29 @@ class zpCookieconsent {
 								gettext_pl('Bottom right', 'zp_cookieconsent') => 'bottom-right',
 						),
 						'desc' => gettext_pl('Choose the position of the popup. top and bottom = banner, top-left/right, bottom-left/right = floating', 'zp_cookieconsent')),
-				gettext_pl('Dismiss on Browse Site', 'zp_cookieconsent') => array(
-						'key' => 'zpcookieconsent_dismissonclick',
-						'type' => OPTION_TYPE_CHECKBOX,
-						'order' => 8,
-						'desc' => gettext_pl('Check to dismiss when users click on internal links.', 'zp_cookieconsent')),
 				gettext_pl('Dismiss on Scroll', 'zp_cookieconsent') => array(
 						'key' => 'zpcookieconsent_dismissonscroll',
 						'type' => OPTION_TYPE_CHECKBOX,
 						'order' => 9,
 						'desc' => gettext_pl('Check to dismiss when users scroll a page [other than <em>Learn more</em> page]. The scroll range option must be set.', 'zp_cookieconsent')),
-				gettext_pl('Scroll Range', 'zp_cookieconsent') => array(
-						'key' => 'zpcookieconsent_scrollrange',
-						'type' => OPTION_TYPE_TEXTBOX,
+				gettext_pl('Color - Popup', 'zp_cookieconsent') => array(
+						'key' => 'zpcookieconsent_colorpopup',
+						'type' => OPTION_TYPE_COLOR_PICKER,
 						'order' => 10,
-						'desc' => gettext_pl('How many pixels should be scrolled before dismiss.', 'zp_cookieconsent'))
+						'desc' => gettext_pl('Choose the color of the popup background.', 'zp_cookieconsent')),
+				gettext_pl('Color - Button', 'zp_cookieconsent') => array(
+						'key' => 'zpcookieconsent_colorbutton',
+						'type' => OPTION_TYPE_COLOR_PICKER,
+						'order' => 10,
+						'desc' => gettext_pl('Choose the color of the button.', 'zp_cookieconsent'))
+				
 		);
 		return $options;
 	}
 
 	static function getCSS() {
 		?>
-		<link rel="stylesheet" type="text/css" src="<?php echo FULLWEBPATH . '/' . USER_PLUGIN_FOLDER; ?>/zp_cookieconsent/cookieconsent.min.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo FULLWEBPATH . '/' . USER_PLUGIN_FOLDER; ?>/zp_cookieconsent/cookieconsent.min.css" />
 		<?php
 	}
 
@@ -151,57 +157,56 @@ class zpCookieconsent {
 		if (getOption('zpcookieconsent_theme')) {
 			$theme = getOption('zpcookieconsent_theme');
 			//fix old option
-			if(!in_array($theme, array('block', 'edgeless', 'classic', 'custom'))) {
+			if (!in_array($theme, array('block', 'edgeless', 'classic', 'custom'))) {
 				$theme = 'block';
 				setOption('zpcookieconsent_theme', $theme, true);
 			}
-		}		
+		}
 		$domain = '';
 		if (getOption('zpcookieconsent_domain')) {
 			$domain = getOption('zpcookieconsent_domain');
 		}
 		$position = getOption('zpcookieconsent_position');
-		if (getOption('zpcookieconsent_position')) {
-			$dismiss_on_click = getOption('zpcookieconsent_position');
-		}
-		$dismiss_on_click = false;
-		if (getOption('zpcookieconsent_dismissonclick')) {
-			$dismiss_on_click = true;
-		}
-		$dismiss_on_scroll = false;
-		$dismiss_on_scroll_range = 75;
+		$dismiss_on_scroll = 0;
 		if (getOption('zpcookieconsent_dismissonscroll') & !strpos($link, sanitize($_SERVER['REQUEST_URI']))) { // false in Cookie Policy Page
-			$dismiss_on_scroll = true;
-			$dismiss_on_scroll_range = getOption('zpcookieconsent_scrollrange');
-			if(empty($dismiss_on_scroll_range)) {
-				$dismiss_on_scroll_range = 75;
-			}
+			$dismiss_on_scroll = 1;
+		}
+		$color_popup = getOption('zpcookieconsent_colorpopup');
+		$color_botton = getOption('zpcookieconsent_colorpopup');
+		if(empty($color_popup)) {
+			$color_popup = '#000';
+		}
+		if(empty($color_botton)) {
+			$color_button = '#f1d600';
 		}
 		?>
 		<script src="<?php echo FULLWEBPATH . '/' . USER_PLUGIN_FOLDER; ?>/zp_cookieconsent/cookieconsent.min.js"></script>
 		<script>
-			window.cookieconsent.initialise({
-				cookie: {
-					domain: '<?php echo $domain; ?>',
-					expiryDays: <?php echo getOption('zpcookieconsent_expirydays'); ?>
-				},
-				content: {
-					header : 'This website uses cookies',
-					message: '<?php echo js_encode($message); ?>',
-					dismiss: '<?php echo js_encode($dismiss); ?>',
-					allow: 'Allow cookies',
-					deny: 'Decline',
-					link: '<?php echo html_encode($learnmore); ?>',
-					href: '<?php echo html_encode($link); ?>'
-				},
-				position: '<?php echo $position; ?>',
-				theme: '<?php echo $theme; ?>',
-				dismissOnScroll: 75
+			window.addEventListener("load", function () {
+				window.cookieconsent.initialise({
+					"palette": {
+						"popup": {
+							"background": "<?php echo $color_popup; ?>"
+						},
+						"button": {
+							"background": "<?php echo $color_button; ?>"
+						}
+					},
+					"position": "<?php echo js_encode($position); ?>",
+					"theme": "<?php echo js_encode($theme); ?>",
+					'dismissOnScroll': <?php echo js_encode($dismiss_on_scroll); ?>,
+					"content": {
+						"header": "<?php echo js_encode($header); ?>",
+						"message": "<?php echo js_encode($message); ?>",
+						"dismiss": "<?php echo js_encode($dismiss); ?>",
+						"deny": "<?php echo js_encode($decline); ?>",
+						"link": "<?php echo js_encode($learnmore); ?>",
+						"href": "<?php echo html_encode($link); ?>"
+					}
+				})
 			});
-
 		</script>
 		<?php
 	}
 
 }
-// class end
