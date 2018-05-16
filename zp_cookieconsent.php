@@ -25,7 +25,6 @@ class zpCookieconsent {
 	function __construct() {
 		setOptionDefault('zpcookieconsent_expirydays', 365);
 		setOptionDefault('zpcookieconsent_theme', 'block');
-		setOptionDefault('zpcookieconsent_scrollrange', '75');
 		setOptionDefault('zpcookieconsent_position', 'bottom');
 		if (getOption('zpcookieconsent_dismissonclick')) {
 			purgeOption('zpcookieconsent_dismissonclick');
@@ -109,7 +108,7 @@ class zpCookieconsent {
 						'key' => 'zpcookieconsent_dismissonscroll',
 						'type' => OPTION_TYPE_CHECKBOX,
 						'order' => 9,
-						'desc' => gettext_pl('Check to dismiss when users scroll a page [other than <em>Learn more</em> page]. The scroll range option must be set.', 'zp_cookieconsent')),
+						'desc' => gettext_pl('Check to dismiss when users scroll a page [other than <em>Learn more</em> page].', 'zp_cookieconsent')),
 				gettext_pl('Color - Popup', 'zp_cookieconsent') => array(
 						'key' => 'zpcookieconsent_colorpopup',
 						'type' => OPTION_TYPE_COLOR_PICKER,
@@ -168,15 +167,15 @@ class zpCookieconsent {
 		}
 		$position = getOption('zpcookieconsent_position');
 		$dismiss_on_scroll = 0;
-		if (getOption('zpcookieconsent_dismissonscroll') & !strpos($link, sanitize($_SERVER['REQUEST_URI']))) { // false in Cookie Policy Page
+		if (getOption('zpcookieconsent_dismissonscroll') && !strpos($link, sanitize($_SERVER['REQUEST_URI']))) { // false in Cookie Policy Page
 			$dismiss_on_scroll = 1;
 		}
 		$color_popup = getOption('zpcookieconsent_colorpopup');
-		$color_botton = getOption('zpcookieconsent_colorpopup');
+		$color_button = getOption('zpcookieconsent_colorpopup');
 		if(empty($color_popup)) {
 			$color_popup = '#000';
 		}
-		if(empty($color_botton)) {
+		if(empty($color_button)) {
 			$color_button = '#f1d600';
 		}
 		?>
