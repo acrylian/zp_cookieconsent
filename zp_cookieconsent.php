@@ -26,6 +26,8 @@ class zpCookieconsent {
 		setOptionDefault('zpcookieconsent_expirydays', 365);
 		setOptionDefault('zpcookieconsent_theme', 'block');
 		setOptionDefault('zpcookieconsent_position', 'bottom');
+		setOptionDefault('zpcookieconsent_colorpopup', '#000');
+		setOptionDefault('zpcookieconsent_colorbutton', '#f1d600');		
 		if (getOption('zpcookieconsent_dismissonclick')) {
 			purgeOption('zpcookieconsent_dismissonclick');
 		}
@@ -171,13 +173,7 @@ class zpCookieconsent {
 			$dismiss_on_scroll = 1;
 		}
 		$color_popup = getOption('zpcookieconsent_colorpopup');
-		$color_button = getOption('zpcookieconsent_colorpopup');
-		if(empty($color_popup)) {
-			$color_popup = '#000';
-		}
-		if(empty($color_button)) {
-			$color_button = '#f1d600';
-		}
+		$color_button = getOption('zpcookieconsent_colorbutton');
 		?>
 		<script src="<?php echo FULLWEBPATH . '/' . USER_PLUGIN_FOLDER; ?>/zp_cookieconsent/cookieconsent.min.js"></script>
 		<script>
@@ -193,7 +189,7 @@ class zpCookieconsent {
 					},
 					"position": "<?php echo js_encode($position); ?>",
 					"theme": "<?php echo js_encode($theme); ?>",
-					'dismissOnScroll': <?php echo js_encode($dismiss_on_scroll); ?>,
+					"dismissOnScroll": <?php echo js_encode($dismiss_on_scroll); ?>,
 					"content": {
 						"header": "<?php echo js_encode($header); ?>",
 						"message": "<?php echo js_encode($message); ?>",
