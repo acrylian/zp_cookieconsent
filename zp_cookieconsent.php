@@ -58,7 +58,8 @@ class zpCookieconsent {
 				gettext_pl('Button: Decline', 'zp_cookieconsent') => array(
 						'key' => 'zpcookieconsent_buttondecline',
 						'type' => OPTION_TYPE_TEXTBOX,
-						'order' => 3,
+						'order' => 3.5,
+						'multilingual' => 1,
 						'desc' => gettext_pl('Link text for the decline button', 'zp_cookieconsent')),
 				gettext_pl('Message', 'zp_cookieconsent') => array(
 						'key' => 'zpcookieconsent_message',
@@ -69,7 +70,7 @@ class zpCookieconsent {
 				gettext_pl('Header', 'zp_cookieconsent') => array(
 						'key' => 'zpcookieconsent_header',
 						'type' => OPTION_TYPE_TEXTBOX,
-						'order' => 1,
+						'order' => 0.5,
 						'multilingual' => 1,
 						'desc' => gettext_pl('Text for the popup header by the plugin. Leave empty to use the default text.', 'zp_cookieconsent')),
 				gettext_pl('Domain', 'zp_cookieconsent') => array(
@@ -119,7 +120,7 @@ class zpCookieconsent {
 				gettext_pl('Color - Button', 'zp_cookieconsent') => array(
 						'key' => 'zpcookieconsent_colorbutton',
 						'type' => OPTION_TYPE_COLOR_PICKER,
-						'order' => 10,
+						'order' => 11,
 						'desc' => gettext_pl('Choose the color of the button.', 'zp_cookieconsent'))
 				
 		);
