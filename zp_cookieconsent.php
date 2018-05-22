@@ -55,12 +55,6 @@ class zpCookieconsent {
 						'type' => OPTION_TYPE_TEXTBOX,
 						'order' => 3,
 						'desc' => gettext_pl('Url to your cookie policy / privacy info page.', 'zp_cookieconsent')),
-				gettext_pl('Button: Decline', 'zp_cookieconsent') => array(
-						'key' => 'zpcookieconsent_buttondecline',
-						'type' => OPTION_TYPE_TEXTBOX,
-						'order' => 3.5,
-						'multilingual' => 1,
-						'desc' => gettext_pl('Link text for the decline button', 'zp_cookieconsent')),
 				gettext_pl('Message', 'zp_cookieconsent') => array(
 						'key' => 'zpcookieconsent_message',
 						'type' => OPTION_TYPE_TEXTAREA,
