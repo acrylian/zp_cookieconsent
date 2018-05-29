@@ -1,4 +1,4 @@
-**NOTE: This plugin will be part of the next Zenphoto release, development has been moved there already and this repository will be abandoned**
+**NOTE: This plugin is now included in Zenphoto 1.5 and will be developed there from now on. This repository will be abandoned**
 
 
 # zp_cookieconsent
